@@ -1,0 +1,50 @@
+.generator {
+  /* Keeps div in the center of the page */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  height: 65%;
+  width: 65%;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+}
+
+.generator form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-group label {
+  margin-bottom: 3px;
+  font-size: 16px;
+  width: 18%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  width: 80%;
+}
+
+.submit-button {
+  margin-left: auto;
+}
