@@ -1,5 +1,10 @@
+/**
+
+Home Page
+
+**/
+
 .generator {
-  /* Keeps div in the center of the page */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -73,6 +78,55 @@ textarea:focus {
   margin-left: auto;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 20%;
+}
+
+.title-container p {
+  font-size: .75rem;
+  font-style: italic;
+}
+
+.generator h1 {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.loader video {
+  width: 50%;
+  height: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/**
+
+Login Page
+
+**/
+
 .login-container {
   padding: 10px;
   width: 60%;
@@ -114,52 +168,6 @@ textarea:focus {
   box-shadow: 0rem 0.875rem 2.125rem 0rem rgba(0,0,0,0.329);
   border-radius: 10px;
   background-color: #f0eef2;
-}
-
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.loader img {
-  width: 25%;
-  height: 25%;
-  animation-name: rotate;
-  animation-duration: 2.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-.title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 20%;
-}
-
-.title-container p {
-  font-size: .75rem;
-  font-style: italic;
-}
-
-.generator h1 {
-  width: 80%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .button {

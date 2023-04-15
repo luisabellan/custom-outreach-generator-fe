@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Generator from './Generator';
 import axios from 'axios';
-import spinner from '../assets/loading-wheel-removebg-preview.png';
-import illustration from '../assets/BIT_Illustration_community.png';
-import logo from '../assets/BIT_Logo_Full_White.png';
+import video from '../assets/ezgif.com-gif-to-mp4.mp4';
+import logo_white from '../assets/BIT_Logo_Full_White.png';
+import logo_black from '../assets/BIT_Logo_Full.png';
 
 const Home = () => {
   const [name, setName] = useState('');
@@ -47,12 +47,17 @@ const Home = () => {
     <div className="App">
       {isLoading ? (
         <div className="loader">
-          <img src={illustration} alt="Loading..." />
+            <div className='header'>
+              <img src={logo_black} alt="BIT Logo" />
+            </div>
+            <video autoPlay loop muted>
+              <source src={video} type="video/mp4" />
+            </video>
         </div>
       ) : (
         <>
           <div className='header'>
-            <img src={logo} alt="BIT Logo" />
+            <img src={logo_white} alt="BIT Logo" />
           </div>
           <Generator
             name={name}
