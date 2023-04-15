@@ -1,73 +1,52 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Generator from './Generator';
-import { isAuthenticated, login, logout } from '../auth/basicAuth'
+import axios from 'axios';
+import spinner from '../assets/loading-wheel-removebg-preview.png';
 
 const Home = () => {
-    const [isAuthenticatedState, setIsAuthenticatedState] = useState(
-    isAuthenticated()
-  );
-  const [keyPhrase, setKeyPhrase] = useState("");
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [jobTitle, setJobTitle] = useState('');
   const [company, setCompany] = useState('');
   const [jobDescription, setJobDescription] = useState('');
   const [resumeHighlights, setResumeHighlights] = useState('');
-  const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({
-      name,
-      email,
-      jobTitle,
-      company,
-      jobDescription,
-      resumeHighlights,
+    setIsLoading(true);
+    const formData = JSON.stringify({
+        your_name: name,
+        job_title: jobTitle,
+        company: company,
+        job_description: jobDescription,
+        key_points_from_resume: resumeHighlights
     });
-    navigate('/confirmation');
-  };
 
-  const handleModal = () => {
-    setShowModal(!showModal);
-  };
+    try {
+        const res = await axios.get(`${import.meta.env.VITE_OUTREACH_API_URI}?your_name=${name}&job_title=${jobTitle}&company=${company}&job_description=${jobDescription}&key_points_from_resume=${resumeHighlights}`, { 
+            headers: {
+                'Content-Type': 'application/json',
+            }
+         });
 
-  const handleLogin = (event) => {
-    event.preventDefault();
-
-    if (login(keyPhrase)) {
-      setIsAuthenticatedState(true);
-    } else {
-      alert("Invalid key phrase");
-    }
-  };
-
-  const handleLogout = () => {
-    logout();
-    setIsAuthenticatedState(false);
-  };
-
-  const handleKeyPhraseChange = (event) => {
-    setKeyPhrase(event.target.value);
+        navigate('/confirmation', { state: { data: res.data, job_title: jobTitle, company: company, name: name } });
+    } catch (error) {
+        console.log(error);
+    } finally {
+        setIsLoading(false);
+    } 
   };
 
   return (
     <div className="App">
-      {!isAuthenticatedState ? (
-        <form onSubmit={handleLogin} className='login-container'>
-          <input
-            className='input'
-            type="text"
-            name="password"
-            placeholder="Password"
-            value={keyPhrase}
-            onChange={handleKeyPhraseChange}
-          />
-          <button type="submit" className='button'>Login</button>
-        </form>
+      {isLoading ? (
+        <div className="loader">
+          <img src={spinner} alt="Loading..." />
+        </div>
       ) : (
         <Generator
         name={name}

@@ -18,6 +18,7 @@ const Generator = ({
 
   return (
     <div className='generator'>
+      <h1>Outreach Generator</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
@@ -77,7 +78,7 @@ const Generator = ({
           />
         </div>
 
-        <button type="submit" className='submit-button'>Submit</button>
+        <button type="submit" className='submit-button button'>Submit</button>
       </form>
     </div>
   )
