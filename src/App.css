@@ -4,12 +4,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 15px;
-  height: 80%;
+  padding: 25px;
+  height: 70%;
   width: 80%;
-  border: 1px solid #ccc;
+  border: 1px solid invisible;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  box-shadow: 0rem 0.875rem 2.125rem 0rem rgba(0,0,0,0.329);
+  border-radius: 10px;
+  background-color: #f0eef2;
 }
 
 .generator form {
@@ -56,20 +59,44 @@ input {
   background-color: #f0eef2;
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid #ff4b00;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid #ff4b00;
+}
+
 .submit-button {
   margin-left: auto;
 }
 
 .login-container {
+  padding: 10px;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.login {
+  box-shadow: 0rem 0.875rem 2.125rem 0rem rgba(0,0,0,0.329);
+  border-radius: 10px;
+  background-color: #f0eef2;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px;
-  border: 1px solid #ccc;
-  width: 25%;
+  border: 1px solid invisible;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .confirmation {
@@ -77,13 +104,16 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px;
-  border: 1px solid #ccc;
-  height: 80%;
-  width: 80%;
+  padding: 25px;
+  border: 1px solid invisible;
+  height: 75%;
+  width: 75%;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  box-shadow: 0rem 0.875rem 2.125rem 0rem rgba(0,0,0,0.329);
+  border-radius: 10px;
+  background-color: #f0eef2;
 }
 
 .loader {
@@ -94,25 +124,42 @@ input {
 }
 
 .loader img {
-  width: 100px;
-  height: 100px;
+  width: 25%;
+  height: 25%;
   animation-name: rotate;
-  animation-duration: 1s;
+  animation-duration: 2.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
 }
 
-.generator h1 {
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 20%;
+}
+
+.title-container p {
+  font-size: .75rem;
+  font-style: italic;
+}
+
+.generator h1 {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
@@ -120,7 +167,7 @@ input {
   width: 30%;
   background-repeat: repeat;
   border-radius: .25rem;
-  background-color: #00808c;
+  background-color: #ff4b00;
   cursor: pointer;
   color: #fff;
   transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
@@ -129,9 +176,9 @@ input {
 }
 
 .button:hover {
-  background-color: #fff;
-  color: #00808c;
-  border: 1px solid #00808c;
+  background-color: #f0eef2;
+  color: #ff4b00;
+  border: 1px solid #ff4b00;
 }
 
 .button-group {
@@ -141,16 +188,39 @@ input {
 }
 
 .outreach-container {
-  height: 70%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border-top: 1px solid #ccc;
+  font-size: .85rem;
 }
 
-.confirmation p {
+.instructions {
   font-style: italic;
 }
 
-.confirmation p span {
+.login h2 {
+  height: 30%;
+}
+
+span {
   font-weight: bold;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.login-header {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -20%);
 }

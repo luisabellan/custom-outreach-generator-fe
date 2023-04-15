@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import logo from '../assets/BIT_Logo_Full_White.png';
 // import mailgun from 'mailgun-js';
 
 const Confirmation = () => {
@@ -12,6 +13,8 @@ const Confirmation = () => {
   const jobTitle = location.state.job_title;
   const company = location.state.company;
   const name = location.state.name;
+
+  const lines = data.split('\n\n');
 
   const handleBack = () => {
     navigate('/');
@@ -41,12 +44,18 @@ const Confirmation = () => {
   
     
   return (
-    <div className='confirmation' >
-        <h1>{name}! Your custom outreach message is ready!</h1>
-        <p>Below, you will find 3 items that are critical to your custom outreach sequence for the {jobTitle} role at {company}: your Initial Outreach Email, the best contact name and email address, and 2 follow-up emails to send 3 and 5 days later. Remember to <span>proofread the email before sending AND attach your resume.</span> Let your career coach know if you have any questions!</p>
+    <>
+      <div className='header'>
+        <img src={logo} alt="BIT Logo" />
+      </div>
+      <div className='confirmation' >
+        <h1>{name}, your custom outreach message is ready!</h1>
+        <p className='instructions'>Below, you will find 3 items that are critical to your custom outreach sequence for the {jobTitle} role at {company}: your Initial Outreach Email, the best contact name and email address, and 2 follow-up emails to send 3 and 5 days later. Remember to <span>proofread the email before sending AND attach your resume.</span> Let your career coach know if you have any questions!</p>
         {data && (
             <div className='outreach-container'>
-                {JSON.stringify(data, null, 2)}
+                {lines.map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
             </div>
         )}
         <div className='button-group'>
@@ -54,7 +63,8 @@ const Confirmation = () => {
           <button className='button'>Email Me</button>
           <button className='button' onClick={handleDownload}>Download</button>
         </div>
-    </div>
+      </div>
+    </>
   )
 }
 

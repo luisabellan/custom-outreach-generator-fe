@@ -15,7 +15,9 @@
   */
   html, body {
     height: 100%;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0d090d;
+    background-image: linear-gradient(0deg, #F5F5F5 50%, #ff4b00 50%);
   }
   /*
     Typographic tweaks!

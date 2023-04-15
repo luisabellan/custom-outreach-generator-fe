@@ -18,7 +18,10 @@ const Generator = ({
 
   return (
     <div className='generator'>
-      <h1>Outreach Generator</h1>
+      <div className='title-container'>
+      <h1>Custom Outreach Generator</h1>
+      <p>By leveraging the capabilities of OpenAI's GPT-3.5 Turbo, the app generates a unique and engaging outreach letter based on the information you provide.</p>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>

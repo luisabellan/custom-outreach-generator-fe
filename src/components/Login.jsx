@@ -1,5 +1,6 @@
 import React from 'react'
 import { login } from '../auth/basicAuth';
+import stacked_logo from '../assets/BIT_Logo_Stacked_White.png';
 
 const Login = ({
     setIsAuthenticatedState,
@@ -22,7 +23,13 @@ const Login = ({
     };
 
   return (
-    <form onSubmit={handleLogin} className='login-container'>
+    <>
+    <div className='login-header'>
+      <img src={stacked_logo} alt="BIT Logo" />
+    </div>
+      <div className='login'>
+        <h2>Custom Outreach Generator</h2>
+      <form onSubmit={handleLogin} className='login-container'>
         <input
             className='input'
             type="text"
@@ -31,8 +38,10 @@ const Login = ({
             value={keyPhrase}
             onChange={handleKeyPhraseChange}
         />
-    <button type="submit" className='button'>Login</button>
-  </form>
+        <button type="submit" className='button'>Login</button>
+      </form>
+      </div>
+    </>
   )
 }
 

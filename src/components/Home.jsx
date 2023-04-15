@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Generator from './Generator';
 import axios from 'axios';
 import spinner from '../assets/loading-wheel-removebg-preview.png';
+import illustration from '../assets/BIT_Illustration_community.png';
+import logo from '../assets/BIT_Logo_Full_White.png';
 
 const Home = () => {
   const [name, setName] = useState('');
@@ -45,24 +47,29 @@ const Home = () => {
     <div className="App">
       {isLoading ? (
         <div className="loader">
-          <img src={spinner} alt="Loading..." />
+          <img src={illustration} alt="Loading..." />
         </div>
       ) : (
-        <Generator
-        name={name}
-        setName={setName}
-        email={email}
-        setEmail={setEmail}
-        jobTitle={jobTitle}
-        setJobTitle={setJobTitle}
-        company={company}
-        setCompany={setCompany}
-        jobDescription={jobDescription}
-        setJobDescription={setJobDescription}
-        resumeHighlights={resumeHighlights}
-        setResumeHighlights={setResumeHighlights}
-        handleSubmit={handleSubmit}
-      />
+        <>
+          <div className='header'>
+            <img src={logo} alt="BIT Logo" />
+          </div>
+          <Generator
+            name={name}
+            setName={setName}
+            email={email}
+            setEmail={setEmail}
+            jobTitle={jobTitle}
+            setJobTitle={setJobTitle}
+            company={company}
+            setCompany={setCompany}
+            jobDescription={jobDescription}
+            setJobDescription={setJobDescription}
+            resumeHighlights={resumeHighlights}
+            setResumeHighlights={setResumeHighlights}
+            handleSubmit={handleSubmit}
+          />
+        </>
       )}
     </div>
   )
