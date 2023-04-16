@@ -1,11 +1,9 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import logo from '../assets/BIT_Logo_Full_White.png';
-// import mailgun from 'mailgun-js';
 
 const Confirmation = () => {
 
-  // const mg = mailgun({apiKey: meta.import.env.VITE_MAILGUN_API_KEY, domain: meta.import.env.VITE_MAILGUN_DOMAIN});
   const navigate = useNavigate();
   const location = useLocation();
 
