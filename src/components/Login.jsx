@@ -27,9 +27,12 @@ const Login = ({
     <div className='login-header'>
       <img src={stacked_logo} alt="BIT Logo" />
     </div>
-      <div className='login'>
-        <h2>Custom Outreach Generator</h2>
-      <form onSubmit={handleLogin} className='login-container'>
+      <div className='login-container'>
+        <div className='login-heading'>
+          <h2>Custom Outreach Generator</h2>
+          <p>By leveraging the capabilities of OpenAI's GPT-3.5 Turbo, the app generates a unique and engaging outreach letter based on the information you provide.</p>
+        </div>
+      <form onSubmit={handleLogin} className='login-form'>
         <input
             className='input'
             type="text"
@@ -38,7 +41,7 @@ const Login = ({
             value={keyPhrase}
             onChange={handleKeyPhraseChange}
         />
-        <button type="submit" className='button'>Login</button>
+        <button type="submit" className='submit-button button'>Login</button>
       </form>
       </div>
     </>
