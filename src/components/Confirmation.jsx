@@ -12,7 +12,7 @@ const Confirmation = () => {
   const company = location.state.company;
   const email = location.state.email;
   const name = location.state.name;
-  const lines = data.split('\n\n');
+  const lines = data.outreach.split('\n\n');
 
   const handleBack = () => {
     navigate('/');
@@ -30,22 +30,7 @@ const Confirmation = () => {
 
   const handleEmail = (event) => {
     event.preventDefault();
-    const data = {
-      "to": `${email}`,
-      "from": 'support@bloomtech.com',
-      "subject": `Outreach for ${jobTitle} at ${company}`,
-      "template": 'custom-outreach',
-      "h:X-Mailgun-Variables": {outreach: lines.join("\n\n")}
-    };
-    axios.post(`https://api.mailgun.net/v3/${import.meta.env.VITE_MAILGUN_DOMAIN}/messages`, data, {
-      api: import.meta.env.VITE_MAILGUN_API_KEY
-    })
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+    console.log('email');
   }
 
   return (
