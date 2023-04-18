@@ -17,7 +17,7 @@ Home Page
   justify-content: space-between;
   box-shadow: 0rem 0.875rem 2.125rem 0rem rgba(0,0,0,0.329);
   border-radius: 10px;
-  background-color: #f0eef2;
+  background-color: white;
 }
 
 .generator form {
@@ -103,13 +103,21 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 25px;
+  border-radius: 10px;
+  height: 70%;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0rem 0.875rem 2.125rem 0rem rgba(0,0,0,0.329);
   background-color: white;
 }
 
 .loader video {
-  width: 50%;
-  height: 50%;
+  width: 75%;
+  height: 75%;
 }
 
 @keyframes rotate {
@@ -135,7 +143,7 @@ textarea:focus {
 }
 
 .button:hover {
-  background-color: #f0eef2;
+  background-color: white;
   color: #ff4b00;
   border: 1px solid #ff4b00;
 }
@@ -222,68 +230,29 @@ Confirmation Page
 
 **/
 
-.confirmation-container {
+.confirmation {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f0eef2;
+  background-color: white;
   box-shadow: 0rem 0.875rem 2.125rem 0rem rgba(0,0,0,0.329);
   border-radius: 10px;
-  padding: 10px;
+  padding: 25px;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  height: 80%;
-  width: 90%;
+  align-items: center;
+  height: 70%;
+  width: 80%;
 }
 
-.confirmation-container .heading {
-  display: flex;
-  font-size: .85rem;
+video {
+  width: 75%;
+  height: 75%;
 }
 
 span {
   color: #ff4b00;
-  font-style: italic;  
-}
-
-.outreach {
-  width: 100%;
-  height: 90%; 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 10px;
-  overflow-y: scroll;
-}
-
-.outreach h4 {
-  margin-top: 20%;
-}
-
-.email {
-  margin-top: 3%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.email p {
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.outreach h5 {
-  margin-bottom: 0.5%;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-
-.button-group {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  font-size: 1.1rem;
 }
