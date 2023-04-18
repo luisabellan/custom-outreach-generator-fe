@@ -20,22 +20,15 @@ const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const formData = JSON.stringify({
-        your_name: name,
-        job_title: jobTitle,
-        company: company,
-        job_description: jobDescription,
-        key_points_from_resume: resumeHighlights
-    });
 
     try {
-        const res = await axios.get(`${import.meta.env.VITE_OUTREACH_API_URI}?your_name=${name}&job_title=${jobTitle}&company=${company}&job_description=${jobDescription}&key_points_from_resume=${resumeHighlights}`, { 
+        const res = await axios.get(`${import.meta.env.VITE_OUTREACH_API_URI}?your_name=${name}&your_email=${email}&job_title=${jobTitle}&company=${company}&job_description=${jobDescription}&key_points_from_resume=${resumeHighlights}`, { 
             headers: {
                 'Content-Type': 'application/json',
             }
          });
 
-        navigate('/confirmation', { state: { data: res.data, job_title: jobTitle, company: company, name: name } });
+        navigate('/confirmation', { state: { data: res.data, job_title: jobTitle, company: company, name: name, email: email } });
     } catch (error) {
         console.log(error);
     } finally {

@@ -232,7 +232,7 @@ Confirmation Page
   border-radius: 10px;
   padding: 25px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-direction: column;
   height: 80%;
   width: 90%;
@@ -243,37 +243,22 @@ span {
   font-style: italic;  
 }
 
+.confirmation-container h4 {
+  height: 10%;
+}
+
 .outreach {
-  height: 75%;
   width: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-size: .8rem;
 }
 
 .outreach h5 {
   margin-bottom: 0.5%;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-}
-
-.first-outreach {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.second-outreach {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.third-outreach {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .button-group {
