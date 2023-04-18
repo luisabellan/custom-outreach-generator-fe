@@ -230,7 +230,7 @@ Confirmation Page
   background-color: #f0eef2;
   box-shadow: 0rem 0.875rem 2.125rem 0rem rgba(0,0,0,0.329);
   border-radius: 10px;
-  padding: 25px;
+  padding: 10px;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -238,21 +238,42 @@ Confirmation Page
   width: 90%;
 }
 
+.confirmation-container .heading {
+  display: flex;
+  font-size: .85rem;
+}
+
 span {
   color: #ff4b00;
   font-style: italic;  
 }
 
-.confirmation-container h4 {
-  height: 10%;
-}
-
 .outreach {
   width: 100%;
-  height: 80%;
+  height: 90%; 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.outreach h4 {
+  margin-top: 20%;
+}
+
+.email {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.email p {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .outreach h5 {
