@@ -60,12 +60,12 @@ input {
 
 input:focus {
   outline: none;
-  border: 1px solid #ff4b00;
+  border: 1px solid #00808c;
 }
 
 textarea:focus {
   outline: none;
-  border: 1px solid #ff4b00;
+  border: 1px solid #00808c;
 }
 
 .submit-button {
@@ -128,7 +128,7 @@ textarea:focus {
   width: 30%;
   background-repeat: repeat;
   border-radius: .25rem;
-  background-color: #ff4b00;
+  background-color: #00808c;
   cursor: pointer;
   color: #fff;
   transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
@@ -138,8 +138,8 @@ textarea:focus {
 
 .button:hover {
   background-color: white;
-  color: #ff4b00;
-  border: 1px solid #ff4b00;
+  color: #00808c;
+  border: 1px solid #00808c;
 }
 
 .header {
@@ -215,7 +215,7 @@ Login Page
 
 .login-form input:focus {
   outline: none;
-  border: 1px solid #ff4b00;
+  border: 1px solid #00808c;
 }
 
 /**
@@ -247,6 +247,6 @@ video {
 }
 
 span {
-  color: #ff4b00;
+  color: #00808c;
   font-size: 1.1rem;
 }

@@ -24,7 +24,7 @@ const Generator = ({
       </div>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">You Name</label>
           <input
             id="name"
             type="text"
@@ -34,7 +34,7 @@ const Generator = ({
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Your Email</label>
           <input
             id="email"
             type="email"
@@ -44,7 +44,7 @@ const Generator = ({
         </div>
 
         <div className="form-group">
-          <label htmlFor="jobTitle">Job Title</label>
+          <label htmlFor="jobTitle">Target Job Title</label>
           <input
             id="jobTitle"
             type="text"
@@ -54,7 +54,7 @@ const Generator = ({
         </div>
 
         <div className="form-group">
-          <label htmlFor="company">Company</label>
+          <label htmlFor="company">Target Company</label>
           <input
             id="company"
             type="text"
@@ -64,7 +64,7 @@ const Generator = ({
         </div>
 
         <div className="form-group">
-          <label htmlFor="jobDescription">Job Description</label>
+          <label htmlFor="jobDescription">Target Job Description</label>
           <textarea
             id="jobDescription"
             value={jobDescription}
@@ -73,7 +73,7 @@ const Generator = ({
         </div>
 
         <div className="form-group">
-          <label htmlFor="resumeHighlights">Resume Highlights</label>
+          <label htmlFor="resumeHighlights">Your Resume Highlights</label>
           <textarea
             id="resumeHighlights"
             value={resumeHighlights}
