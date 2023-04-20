@@ -24,11 +24,12 @@ const Generator = ({
       </div>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">You Name</label>
+          <label htmlFor="name">Your Name</label>
           <input
             id="name"
             type="text"
             value={name}
+            placeholder='Enter your full name'
             onChange={(e) => setName(e.target.value)}
           />
         </div>
@@ -39,6 +40,7 @@ const Generator = ({
             id="email"
             type="email"
             value={email}
+            placeholder='Enter your email address'
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
@@ -49,6 +51,7 @@ const Generator = ({
             id="jobTitle"
             type="text"
             value={jobTitle}
+            placeholder='Enter the job title you are targeting'
             onChange={(e) => setJobTitle(e.target.value)}
           />
         </div>
@@ -59,6 +62,7 @@ const Generator = ({
             id="company"
             type="text"
             value={company}
+            placeholder='Enter the company you are targeting'
             onChange={(e) => setCompany(e.target.value)}
           />
         </div>
@@ -68,6 +72,7 @@ const Generator = ({
           <textarea
             id="jobDescription"
             value={jobDescription}
+            placeholder='Copy & paste 3-5 key points from the target job description'
             onChange={(e) => setJobDescription(e.target.value)}
           />
         </div>
@@ -77,6 +82,7 @@ const Generator = ({
           <textarea
             id="resumeHighlights"
             value={resumeHighlights}
+            placeholder='Copy & paste 3-5 relevant bullet points from your resume'
             onChange={(e) => setResumeHighlights(e.target.value)}
           />
         </div>
