@@ -1,4 +1,4 @@
-const keyPhrase = "bloomtech_bear_123";
+const keyPhrase = import.meta.env.VITE_KEY_PHRASE;
 
 const isAuthenticated = () => {
   const savedKeyPhrase = localStorage.getItem("keyPhrase");
