@@ -36,8 +36,8 @@ Home Page
 
 .form-group label {
   margin-bottom: 3px;
-  font-size: 1rem;
-  width: 18%;
+  font-size: .85rem;
+  width: 19%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -253,4 +253,119 @@ video {
 span {
   color: #00808c;
   font-size: 1.1rem;
+}
+
+/* Mobile screen styles */
+@media only screen and (max-width: 1080px) {
+
+  .generator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 90%;
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .generator form {
+    width: 100%;
+    align-items: center;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6px;
+    width: 100%;
+  }
+
+  .form-group label {
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .title-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .title-container p {
+    width: 80%;
+    align-self: center;
+    text-align: center;
+  }
+
+  .generator h1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .loader {
+    height: auto;
+    width: 90%;
+    height: 80%;
+    padding: 10px;
+  }
+
+  .loader video {
+    width: 50%;
+    height: auto;
+  }
+
+  .button {
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .header {
+    position: relative;
+    width: 60%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login-header {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: none;
+    width: 50%;
+  }
+
+  .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    padding: 25px;
+  }
+
+  .login-heading {
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .login-form {
+    height: auto;
+  }
+
 }
