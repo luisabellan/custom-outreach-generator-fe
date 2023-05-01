@@ -30,7 +30,7 @@ const Home = () => {
         navigate('/confirmation', { state: { data: res.data, job_title: jobTitle, company: company, name: name, email: email } });
     } catch (error) {
         alert('This app uses OpenAI GPT 3.5-Turbo. API usage is very high right now. Please try again later.');
-        axios.post(`${import.meta.env.VITE_ERROR_API_URL}`, {
+        axios.post(`${import.meta.env.VITE_ERROR_API_URI}`, {
             error: error,
             your_name: name,
             your_email: email,
