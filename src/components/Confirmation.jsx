@@ -21,7 +21,7 @@ const Confirmation = () => {
         <img src={logo} alt="BIT Logo" />
       </div>
       <div className='confirmation' >
-        <h1>You've just taken the first step to landing your next job!</h1>
+        <h1>We've received your request. In the next couple minutes,...</h1>
         <h4>Check your email ( <span>{email}</span> ) for your outreach message to {company} for the {jobTitle} position.</h4>
         <video autoPlay loop muted>
                 <source src={video} type="video/mp4" />

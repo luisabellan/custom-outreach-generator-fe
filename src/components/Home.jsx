@@ -18,7 +18,6 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
 
     try {
         const res = await axios.get(`${import.meta.env.VITE_OUTREACH_API_URI}?your_name=${name}&your_email=${email}&job_title=${jobTitle}&company=${company}&job_description=${jobDescription}&key_points_from_resume=${resumeHighlights}`, { 
@@ -30,9 +29,7 @@ const Home = () => {
         navigate('/confirmation', { state: { data: res.data, job_title: jobTitle, company: company, name: name, email: email } });
     } catch (error) {
         alert('This app uses OpenAI GPT 3.5-Turbo. API usage is very high right now. Please try again later.');
-    } finally {
-        setIsLoading(false);
-    } 
+    }
   };
 
   return (
