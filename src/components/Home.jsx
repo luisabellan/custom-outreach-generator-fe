@@ -20,7 +20,7 @@ const Home = () => {
     e.preventDefault();
 
     try {
-        const res = await axios.get(`${import.meta.env.VITE_OUTREACH_API_URI}?your_name=${name}&your_email=${email}&job_title=${jobTitle}&company=${company}&job_description=${jobDescription}&key_points_from_resume=${resumeHighlights}`, { 
+        const res = await axios.get(`${import.meta.env.VITE_OUTREACH_API_URI}?your_name=${name}&your_email=${email}&job_title=${jobTitle}&company=${company}&job_description=${encodeURIComponent(jobDescription)}&key_points_from_resume=${encodeURIComponent(resumeHighlights)}`, { 
             headers: {
                 'Content-Type': 'application/json',
             }
