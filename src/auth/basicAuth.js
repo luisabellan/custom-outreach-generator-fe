@@ -5,8 +5,8 @@ const isAuthenticated = () => {
   return savedKeyPhrase === keyPhrase;
 };
 
-const login = (keyPhrase) => {
-  if (keyPhrase === keyPhrase) {
+const login = (inputKeyPhrase) => {
+  if (inputKeyPhrase === keyPhrase) {
     localStorage.setItem("keyPhrase", keyPhrase);
     return true;
   }
